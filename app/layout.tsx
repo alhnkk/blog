@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
@@ -114,6 +115,7 @@ export default function RootLayout({
             <Toaster richColors position="top-right" />
           </ThemeProvider>
         </ImageKitProvider>
+        <Analytics />
       </body>
     </html>
   );
