@@ -1,5 +1,8 @@
 import { Suspense } from "react";
 import { getContacts } from "@/lib/actions/contact";
+
+// Force dynamic rendering for admin pages
+export const dynamic = "force-dynamic";
 import {
   Card,
   CardContent,

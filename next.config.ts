@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
 
+  // Output configuration for better build handling
+  output: "standalone",
+
+  // Generate static pages where possible, but allow dynamic for admin routes
+  generateStaticParams: true,
+
   // Caching headers
   async headers() {
     return [

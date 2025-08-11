@@ -30,6 +30,9 @@ import { getAllComments } from "@/lib/actions/comment";
 import { getCategories } from "@/lib/actions/category";
 import { getAnalyticsStats } from "@/lib/actions/analytics";
 
+// Force dynamic rendering for admin pages
+export const dynamic = "force-dynamic";
+
 async function DashboardStats() {
   const [postsResult, commentsResult, , analyticsStats] = await Promise.all([
     getAllPosts(),

@@ -1,5 +1,4 @@
 import { BlogList } from "@/components/blog-list";
-import { trackEvent } from "@/lib/actions/analytics";
 import {
   getCachedHomepagePosts,
   getCachedPopularTags,
@@ -49,9 +48,6 @@ export const metadata: Metadata = {
 export const revalidate = 300; // 5 minutes
 
 const HomePage = async () => {
-  // Track homepage view (non-blocking)
-  trackEvent("page_view", "/").catch(console.error);
-
   // Fetch cached data
   const { posts, pagination } = await getCachedHomepagePosts();
 

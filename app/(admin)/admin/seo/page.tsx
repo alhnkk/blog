@@ -3,6 +3,9 @@ import { getSiteSettings } from "@/lib/actions/seo";
 import { SEOSettingsForm } from "@/components/admin/seo-settings-form";
 import { Metadata } from "next";
 
+// Force dynamic rendering for admin pages
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "SEO Paneli",
   description: "Site SEO ayarlarını yönetin",

@@ -1,5 +1,8 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
+
+// Force dynamic rendering for admin pages
+export const dynamic = "force-dynamic";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

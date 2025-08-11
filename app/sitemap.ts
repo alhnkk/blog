@@ -15,12 +15,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     generateSitemapEntry("/iletisim", new Date(), "monthly", 0.3),
   ];
 
-  // Dynamic pages
-  const [posts, categories, tags] = await Promise.all([
-    getSitemapPosts(),
-    getSitemapCategories(),
-    getSitemapTags(),
-  ]);
+  // Dynamic pages - handle build-time errors gracefully
+  try {
+    const [posts, categories, tags] = await Promise.all([
+      getSitemapPosts(),
+      getSitemapCategories(),
+      getSitemapTags(),
+    ]);
 
-  return [...staticPages, ...posts, ...categories, ...tags];
+    return [...staticPages, ...posts, ...categories, ...tags];
+  } catch (error) {
+    console.warn(
+      "Database not available during build, returning static sitemap only:",
+      error
+    );
+    return staticPages;
+  }
 }
