@@ -84,7 +84,7 @@ export function CommentsSection({
   }, 0);
 
   return (
-    <div className={cn("space-y-8", className)}>
+    <div className={cn("space-y-8 ", className)}>
       {/* Comments Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
