@@ -9,9 +9,7 @@
     "lint": "next lint",
     "db:seed": "tsx prisma/seed.ts",
     "analyze": "ANALYZE=true next build",
-    "build:prod": "NODE_ENV=production next build",
-    "bundle:check": "node scripts/bundle-size-check.js",
-    "build:optimized": "node scripts/build-with-check.js"
+    "build:prod": "NODE_ENV=production next build"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
