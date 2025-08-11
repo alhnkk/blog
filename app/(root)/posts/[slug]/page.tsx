@@ -237,7 +237,7 @@ const PostPage = async ({ params }: PostPageProps) => {
 
       {/* Article Content */}
       <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6 border-x bg-white mb-20">
+        <div className="max-w-3xl mx-auto px-6 border-x bg-white dark:bg-background dark:border-none mb-20">
           {/* Author & Meta Info */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12 py-12 border-b">
             <div className="flex items-center gap-4">
